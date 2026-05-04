@@ -1,33 +1,33 @@
 let humanScore = 0;
 let computerScore = 0;
 function getRandom(){
-  let result = Math.random();
-  return result;
+  
+  return  Math.random();
+  // returns a random number between 1 and 0
 }
 function getComputerChoice(){
- if(getRandom() < 0.4 ){
-  console.log("Rock")
- }
- else if(getRandom() >= 0.4 && getRandom() > 0.7){
-  console.log("Paper")
- }
- else{
-  console.log("Scissor")
- }
-let computerChoice =getComputerChoice();
-return computerChoice();
+const Random = getRandom();
+if(Random < 0.31){
+  return "rock";
+}
+else if(Random < 0.61){
+  return "paper";
+
+}
+else{
+  return "scissor";
+}
+// returns Rock paper or scissor based on random number
 };
  function getHumanChoice() {
-  // console.log("***---------choose one of the following----------***")
-  // console.log("\n1.Rock")
-  // console.log("\n2.Paper")
-  // console.log("\n3.Scissor")
-  let humanChoice = prompt("Choose Your Weapon");
-  return humanChoice;
+ 
+  const humanChoice = prompt("Choose Your Weapon (rock/paper/scissor)");
+  return humanChoice.toLowerCase();
+  // takes humanChoice input  and converts into lowercase
  }
- let humanChoice = getHumanChoice().toLowerCase;
- let computerChoice = getComputerChoice();
+ 
 function playRound(humanChoice,computerChoice){
+  console.log(`you choose ${humanChoice} | computer choose ${computerChoice}`);
   if(humanChoice === computerChoice){
     console.log("It is a Draw!!")
   }

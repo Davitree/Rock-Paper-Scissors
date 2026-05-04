@@ -44,7 +44,14 @@ else {
   computerScore++;
 }
 }
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
 
-playRound(humanSelection,computerSelection);
+function playGame(){
+  let totalRounds = 5;
+  for (let round = 1; round<= totalRounds ;round++){
+    
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+    playRound(humanSelection,computerSelection);
+  }
+}
+playGame();
